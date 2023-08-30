@@ -19,6 +19,10 @@ jobs:
       with:
         go-version: '1.20'
 
+    - name: Independencies Installation
+      run:  |
+        go mod tidy
+
     - name: Build
       run: go build -v ./...
 
